@@ -1,0 +1,36 @@
+﻿@model IEnumerable<HotelManagementSystem.ViewModel.RoomDetailsViewModel>
+
+
+
+<table class="table table-striped" style="width: 100%">
+    <thead style="background-color: ThreeDDarkShadow">
+        <tr>
+            <th>Action</th>
+            <th>Room Image</th>
+            <th>Room Number</th>
+            <th>Room Price</th>
+            <th>Booking Status</th>
+            <th>Room Type</th>
+            <th>Room Capacity</th>
+            <th>Room Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+            {
+                <tr>
+                    <td>
+                        <span id="btnDelete" class="glyphicon glyphicon-trash" onclick="DeleteRoom(@item.RoomId)"></span>&nbsp;&nbsp;
+                        <span id="btnEdit" class="glyphicon glyphicon-pencil" onclick="EditRoom(@item.RoomId)"/>
+                    </td>
+                    <td><img src="@Url.Content("~/RoomImages/"+item.RoomImage)" width="50" height="50" class="img-responsive"/></td>
+                    <td>@item.RoomNumber</td>
+                    <td>@item.RoomPrice</td>
+                    <td>@item.BookingStatus</td>
+                    <td>@item.RoomType</td>
+                    <td>@item.RoomCapacity</td>
+                    <td>@item.RoomDescription</td>
+                </tr>
+            }
+    </tbody>
+</table>

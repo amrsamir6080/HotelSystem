@@ -1,0 +1,38 @@
+﻿@model IEnumerable<HotelManagementSystem.ViewModel.RoomBookingViewModel>
+
+
+
+<table class="table table-striped" style="width: 100%">
+    <thead style="background-color: ThreeDDarkShadow">
+        <tr>
+            <th>Customer Name</th>
+            <th>Customer Phone</th>
+            <th>Customer Address</th>
+            <th>Booking From</th>
+            <th>Booking To</th>
+            <th>Number Of Days</th>
+            <th>Number Of Members</th>
+            <th>Room Number</th>
+            <th>Room Price</th>
+            <th>Total Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CustomerName</td>
+                <td>@item.CustomerPhone</td>
+                <td>@item.CustomerAddress</td>
+                <td>@Convert.ToDateTime(item.BookingFrom).ToString("dd-MMM-yyyy")</td>
+                <td>@Convert.ToDateTime(item.BookingTo).ToString("dd-MMM-yyyy")</td>
+                <td>@item.NoOfDays</td>
+                <td>@item.NoOfMembers</td>
+                <td>@item.RoomNumber</td>
+                <td>@item.RoomPrice.ToString("#,##0.00")</td>
+                <td>@item.TotalAmount.ToString("#,##0.00")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

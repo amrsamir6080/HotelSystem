@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HotelBDModelStoreContainer" CdmEntityContainer="HotelBDEntities">
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="HotelBDModel.Payment">
+        <MappingFragment StoreEntitySet="Payments">
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+          <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+          <ScalarProperty Name="paymentTypeId" ColumnName="paymentTypeId" />
+          <ScalarProperty Name="paymentAmount" ColumnName="paymentAmount" />
+          <ScalarProperty Name="IsAcrive" ColumnName="IsAcrive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomBookings">
+      <EntityTypeMapping TypeName="HotelBDModel.RoomBooking">
+        <MappingFragment StoreEntitySet="RoomBookings">
+          <ScalarProperty Name="CustomerPhone" ColumnName="CustomerPhone" />
+          <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="BookingFrom" ColumnName="BookingFrom" />
+          <ScalarProperty Name="BookingTo" ColumnName="BookingTo" />
+          <ScalarProperty Name="AssignRoomId" ColumnName="AssignRoomId" />
+          <ScalarProperty Name="NoOfMembers" ColumnName="NoOfMembers" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="HotelBDModel.Room">
+        <MappingFragment StoreEntitySet="Rooms">
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+          <ScalarProperty Name="RoomImage" ColumnName="RoomImage" />
+          <ScalarProperty Name="RoomPrice" ColumnName="RoomPrice" />
+          <ScalarProperty Name="BookingStatusId" ColumnName="BookingStatusId" />
+          <ScalarProperty Name="RoomTypeId" ColumnName="RoomTypeId" />
+          <ScalarProperty Name="RoomCapacity" ColumnName="RoomCapacity" />
+          <ScalarProperty Name="RoomDescription" ColumnName="RoomDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingStatus">
+      <EntityTypeMapping TypeName="HotelBDModel.BookingStatu">
+        <MappingFragment StoreEntitySet="BookingStatus">
+          <ScalarProperty Name="BookingStatusId" ColumnName="BookingStatusId" />
+          <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTypes">
+      <EntityTypeMapping TypeName="HotelBDModel.PaymentType">
+        <MappingFragment StoreEntitySet="PaymentTypes">
+          <ScalarProperty Name="PaymentTypeId" ColumnName="PaymentTypeId" />
+          <ScalarProperty Name="PaymentType1" ColumnName="PaymentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomTypes">
+      <EntityTypeMapping TypeName="HotelBDModel.RoomType">
+        <MappingFragment StoreEntitySet="RoomTypes">
+          <ScalarProperty Name="RoomTypeName" ColumnName="RoomTypeName" />
+          <ScalarProperty Name="RoomTypeId" ColumnName="RoomTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
